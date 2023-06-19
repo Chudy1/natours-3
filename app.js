@@ -46,8 +46,13 @@ app.use(
     contentSecurityPolicy: {
       directives: {
         defaultSrc: ["'self'"],
-        connectSrc: ["'self'", 'natours-tour-nljq.onrender.com'],
-        scriptSrc: ["'self'"],
+        connectSrc: ["'self'", 'natours-app-3.onrender.com'],
+        scriptSrc: ["'self'", "'unsafe-inline'"],
+        styleSrc: ["'self'", '*'],
+        fontSrc: ['*'],
+        imgSrc: ['*'],
+        objectSrc: ["'none'"],
+        mediaSrc: ['*'],
       },
     },
   })
