@@ -40,7 +40,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/js', express.static(path.join(__dirname, 'public/js')));
 
 // Set security http header
-
+/*
 const scriptSrcUrls = [
   'https://api.tiles.mapbox.com/',
   'https://api.mapbox.com/',
@@ -56,6 +56,7 @@ const styleSrcUrls = [
   'https://www.myfonts.com/fonts/radomir-tinkov/gilroy/*',
   ' checkout.stripe.com',
 ];
+*/
 
 app.use(
   helmet({
