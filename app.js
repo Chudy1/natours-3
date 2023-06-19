@@ -63,9 +63,13 @@ app.use(
     contentSecurityPolicy: {
       directives: {
         defaultSrc: ["'self'"],
-        connectSrc: ["'self'", 'natours-app-3.onrender.com'],
-        scriptSrc: ["'self'", ...scriptSrcUrls],
-        styleSrc: ["'self'", ...styleSrcUrls],
+        connectSrc: [
+          "'self'",
+          'natours-app-3.onrender.com',
+          'https://api.mapbox.com',
+        ],
+        scriptSrc: ["'self'", "'unsafe-inline'"],
+        styleSrc: ["'self'", '*'],
         fontSrc: ['*'],
         imgSrc: ['*'],
         objectSrc: ["'none'"],
