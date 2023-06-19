@@ -74,11 +74,12 @@ app.use(
           'https://api.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js',
           'https://js.stripe.com/v3',
         ],
-        styleSrc: ["'self'", "'unsafe-inline'"],
+        styleSrc: ["'self'", 'https://fonts.googleapis.com'],
         fontSrc: ['*'],
         imgSrc: ['*'],
         objectSrc: ["'none'"],
         mediaSrc: ['*'],
+        frameSrc: ['https://js.stripe.com/'],
       },
     },
   })
