@@ -40,6 +40,23 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/js', express.static(path.join(__dirname, 'public/js')));
 
 // Set security http header
+
+const scriptSrcUrls = [
+  'https://api.tiles.mapbox.com/',
+  'https://api.mapbox.com/',
+  'https://*.cloudflare.com',
+  'https://js.stripe.com/v3/',
+  'https://checkout.stripe.com',
+];
+
+const styleSrcUrls = [
+  'https://api.mapbox.com/',
+  'https://api.tiles.mapbox.com/',
+  'https://fonts.googleapis.com/',
+  'https://www.myfonts.com/fonts/radomir-tinkov/gilroy/*',
+  ' checkout.stripe.com',
+];
+
 app.use(
   helmet({
     useDefaults: true,
@@ -47,8 +64,8 @@ app.use(
       directives: {
         defaultSrc: ["'self'"],
         connectSrc: ["'self'", 'natours-app-3.onrender.com'],
-        scriptSrc: ["'self'", "'unsafe-inline'"],
-        styleSrc: ["'self'", '*'],
+        scriptSrc: ["'self'", ...scriptSrcUrls],
+        styleSrc: ["'self'", ...styleSrcUrls],
         fontSrc: ['*'],
         imgSrc: ['*'],
         objectSrc: ["'none'"],
