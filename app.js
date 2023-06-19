@@ -64,23 +64,19 @@ app.use(
     contentSecurityPolicy: {
       directives: {
         defaultSrc: ["'self'"],
-        connectSrc: [
-          "'self'",
-          'natours-app-3.onrender.com',
-          'https://api.mapbox.com',
-        ],
+        connectSrc: ["'self'", 'natours-app-3.onrender.com', 'api.mapbox.com'],
         scriptSrc: [
           "'self'",
           "'unsafe-inline'",
-          'https://api.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js',
-          'https://js.stripe.com/v3',
+          'api.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js',
+          'js.stripe.com/v3',
         ],
-        styleSrc: ["'self'", 'https://fonts.googleapis.com'],
+        styleSrc: ["'self'", 'fonts.googleapis.com'],
         fontSrc: ['*'],
         imgSrc: ['*'],
         objectSrc: ["'none'"],
         mediaSrc: ['*'],
-        frameSrc: ['https://js.stripe.com/'],
+        frameSrc: ['js.stripe.com/'],
       },
     },
   })
