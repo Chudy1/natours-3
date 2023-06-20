@@ -9,7 +9,7 @@ import { loadStripe } from '@stripe/stripe-js';
 
 export const bookTour = async (tourId) => {
   try {
-    const stripe = await loadStripe(
+    await loadStripe(
       'pk_test_51LBEZMEQ4J9XHH9EYQAFt30oLtmj8u74HGW6KDfH0rtIk58QemIOR99DEO0PwlRsRtca5fgNnVa2sKxJ3RtUwERx00TLNjAneJ'
     );
     //   1. Get checkout session from API
