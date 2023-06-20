@@ -69,7 +69,7 @@ if (bookBtn) {
     e.preventDefault();
     e.target.textContent = 'Processing...';
     console.log('Processing...');
-    // const { tourId } = e.target.dataset;
-    // bookTour(tourId);
+    const { tourId } = e.target.dataset;
+    bookTour(tourId);
   });
 }
